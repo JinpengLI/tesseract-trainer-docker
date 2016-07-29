@@ -16,14 +16,12 @@ $ docker run -d -p 20022:22 --name training_tesseract jinpengli/tesseract-traine
 
 Now you can use ssh to connect the container to train tesseract.
 
+```
 $ ssh -p 20022 root@localhost
-
-You can see an training example in /root/tesseract-trainer-docker/example_train
-
-```
-/root/tesseract-trainer-docker/example_train/training_text.txt
 ```
 
-contain training texts.
+You can see a training example in `/root/tesseract-trainer-docker/example_train`
+
+`/root/tesseract-trainer-docker/example_train/training_text.txt` contains training texts.
 
 `/root/tesseract-trainer-docker/example_train/train.sh` trains the tesseract. `/root/tesseract-trainer-docker/example_train/test_image.png` is a test image.
