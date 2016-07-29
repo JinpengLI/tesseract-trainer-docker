@@ -8,7 +8,6 @@ This Dockerfile is based on the url `https://github.com/tesseract-ocr/tesseract/
 
 Suppose you know how to use ssh
 
-
 ```
 $ docker pull jinpengli/tesseract-trainer-docker
 $ docker run -d -p 20022:22 --name training_tesseract jinpengli/tesseract-trainer-docker 
@@ -25,3 +24,5 @@ You can see a training example in `/root/tesseract-trainer-docker/example_train`
 `/root/tesseract-trainer-docker/example_train/training_text.txt` contains training texts.
 
 `/root/tesseract-trainer-docker/example_train/train.sh` trains the tesseract. `/root/tesseract-trainer-docker/example_train/test_image.png` is a test image.
+
+`/usr/share/fonts/truetype/dejavu` contains font files.
