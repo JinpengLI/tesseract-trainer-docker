@@ -1,3 +1,5 @@
+#!/bin/bash
+
 TLANG=tlang
 FONTSDIR=/usr/share/fonts/truetype/dejavu
 FONTNAME_NOSPACE=dejavusans
