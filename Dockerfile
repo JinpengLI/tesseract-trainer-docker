@@ -33,11 +33,10 @@ RUN set -xe \
         && ldconfig \
         && cd .. \
     && git clone https://github.com/tesseract-ocr/langdata.git \
-    && git clone https://github.com/JinpengLI/tesseract-trainer-docker.git /root/tesseract-trainer-docker \
     && git clone https://github.com/tesseract-ocr/tessdata.git \
         && cd tessdata \
         && mv * /usr/local/share/tessdata/ \
-        && cd .. \
+        && cd .. 
 #    && apt-get purge --auto-remove -y autoconf \
 #                                      build-essential \
 #                                      git \
@@ -49,6 +48,7 @@ RUN set -xe \
 #    && rm -rf tesseract tessdata /var/cache/apk/*
 
 
+RUN git clone https://github.com/JinpengLI/tesseract-trainer-docker.git /root/tesseract-trainer-docker 
 RUN set -xe && cd /root/tesseract-trainer-docker/example_train && ls && ./train.sh
 
 ## build a ssh server so that the user cannot use it from ssh
