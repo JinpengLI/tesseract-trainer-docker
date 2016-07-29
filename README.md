@@ -1,3 +1,9 @@
+
+Tesserat training
+-----------------
+
+Train tesserat from font files and text files.
+
 This Dockerfile is based on the url `https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract`
 
 Suppose you know how to use ssh
