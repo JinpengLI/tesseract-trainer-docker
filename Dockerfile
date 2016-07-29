@@ -22,6 +22,7 @@ RUN set -xe \
                           libpango1.0-dev \
                           libtool \
                           libicu-dev \
+                          fonts-wqy-zenhei \
     && git clone https://github.com/tesseract-ocr/tesseract.git \
         && cd tesseract \
         && ./autogen.sh \
