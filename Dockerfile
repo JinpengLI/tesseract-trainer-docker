@@ -31,6 +31,8 @@ RUN set -xe \
         && make training-install \
         && ldconfig \
         && cd .. \
+    && git clone https://github.com/tesseract-ocr/langdata.git \
+    && git clone https://github.com/JinpengLI/tesseract-trainer-docker.git /root/tesseract-trainer-docker
     && git clone https://github.com/tesseract-ocr/tessdata.git \
         && cd tessdata \
         && mv * /usr/local/share/tessdata/ \
