@@ -49,7 +49,7 @@ RUN set -xe \
 #    && rm -rf tesseract tessdata /var/cache/apk/*
 
 
-RUN set -xe && cd /root/tesseract-trainer-docker/example_train && ./train.sh
+RUN set -xe && cd /root/tesseract-trainer-docker/example_train && ls && ./train.sh
 
 ## build a ssh server so that the user cannot use it from ssh
 RUN apt-get update && apt-get install -y openssh-server
