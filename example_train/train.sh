@@ -2,9 +2,9 @@ TLANG=tlang
 FONTSDIR=/usr/share/fonts/truetype/dejavu
 FONTNAME_NOSPACE=dejavusans
 FONTNAME="DejaVu Sans"
+FONT_PROPERTIES="dejavusans 0 0 0 0 0"
 
-
-text2image --text=training_text.txt --outputbase=${TLANG}.${FONTNAME_NOSPACE}.exp0 --font='DejaVu Sans' --fonts_dir=${FONTSDIR}
+text2image --text=training_text.txt --outputbase=${TLANG}.${FONTNAME_NOSPACE}.exp0 --font=''"${FONTNAME}"'' --fonts_dir=${FONTSDIR}
 tesseract ${TLANG}.${FONTNAME_NOSPACE}.exp0.tif ${TLANG}.${FONTNAME_NOSPACE}.exp0 box.train
 tesseract ${TLANG}.${FONTNAME_NOSPACE}.exp0.tif ${TLANG}.${FONTNAME_NOSPACE}.exp0 box.train.stderr
 unicharset_extractor ${TLANG}.${FONTNAME_NOSPACE}.exp0.box
@@ -23,5 +23,15 @@ mv pffmtable ${TLANG}.pffmtable
 
 combine_tessdata ${TLANG}.
 
-tesseract test_image.png output -l tlang
 
+rm output.txt > /dev/null
+tesseract test_image.png output -l ${TLANG}
+
+PREDITSTR=$(head -n 1 output.txt)
+
+echo $PREDITSTR
+
+if [ "$PREDITSTR" != "jumps" ]; then
+   exit 1
+fi
+echo "success"
