@@ -24,7 +24,7 @@ mv inttemp ${TLANG}.inttemp
 mv pffmtable ${TLANG}.pffmtable
 
 combine_tessdata ${TLANG}.
-
+mv ${TLANG}.traineddata /usr/local/share/tessdata/
 
 rm output.txt > /dev/null
 tesseract test_image.png output -l ${TLANG}
