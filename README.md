@@ -6,12 +6,14 @@ Train Tesseract from font files and text files.
 
 This Dockerfile is based on the url `https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract`
 
-Suppose you know how to use ssh
+Suppose you know how to use ssh and docker
+
 
 ```
-$ docker pull jinpengli/tesseract-trainer-docker
 $ docker run -d -p 20022:22 --name training_tesseract jinpengli/tesseract-trainer-docker 
 ```
+
+
 
 Now you can use ssh to connect the container to train tesseract.
 
