@@ -2,6 +2,8 @@
 Tesseract training
 -----------------
 
+[![](https://images.microbadger.com/badges/image/jinpengli/tesseract-trainer-docker.svg)](https://microbadger.com/images/jinpengli/tesseract-trainer-docker "Get your own image badge on microbadger.com")
+
 Train Tesseract from font files and text files.
 
 This Dockerfile is based on the url `https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract`
